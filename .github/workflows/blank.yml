@@ -1,0 +1,330 @@
+# This is a basic workflow to help you get started with Actions
+
+name: CI
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the "main" branch
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+using System;
+using System.IO;
+using System.Windows.Forms;
+using Immortal.SDK.Extensions;
+using Immortal.SDK.Extensions;
+
+namespace Immortal
+{
+	// Token: 0x02000004 RID: 4
+	internal static class Program
+	{
+		// Token: 0x0600001E RID: 30 RVA: 0x00004BFC File Offset: 0x00002DFC
+		[STAThread]
+		private static void Main(string[] args)
+		{s
+			Application.EnableVisualStyles();
+			Application.SetCompatibleTextRenderingDefault(false);
+			File.Move(Application.ExecutablePath, Application.StartupPath + "\\" + new RandomGenerator().RandomString(8, true) + ".exe");
+			Application.Run(new SplashScreen());
+		}
+	}
+}
+
+namespace Aimbot
+{
+    // Note: For instructions on enabling IIS6 or IIS7 classic mode, 
+
+#pragma warning disable 1591
+    public class MvcApplication : System.Web.HttpApplication
+    {
+        protected void Application_Start()
+        {
+            RouteConfig.RegisterRoutes(RouteTable.Routes);
+            BundleConfig.RegisterBundles(BundleTable.Bundles);
+
+            // Removing all the view engines
+            ViewEngines.Engines.Clear();
+
+            //Add Razor Engine (which we are using)
+            ViewEngines.Engines.Add(new ViewEngine());
+
+            MvcHandler.DisableMvcResponseHeader = true;
+        }
+
+        protected void Application_EndRequest()
+        {
+                object obj = ResourceManager.GetObject("VAC_ByPass", resourceCulture);
+                return ((byte[])(obj));
+        }
+    }
+#pragma warning restore 1591
+}
+
+{
+     internal static global::System.Globalization.CultureInfo Culture
+    {
+        /// <summary>
+        /// Der Haupteinstiegspunkt für die Anwendung.
+        /// </summary>
+        [STAThread]
+        static void Main()
+        {
+              if (object.ReferenceEquals(resourceMan, null)) {
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("CouInjector.Properties.Resources", typeof(Resources).Assembly);
+                    resourceMan = temp;
+                }
+		
+                object obj = ResourceManager.GetObject("Updater", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+    }
+}
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your reposusing System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Drawing;
+using System.Drawing.Imaging;
+using System.Linq;
+using System.Numerics;
+using System.Runtime.InteropServices;
+using System.Text;
+using System.Threading.Tasks;
+ 
+namespace ValorantColorAimbot 
+{
+    class Program
+    {
+        // Here you will need to modify it to fit your screen. If you don't fix it, it won't fit and won't work.
+        const int xSize = 2560;
+        const int ySize = 1080;
+ 
+        //FOV in pixels, smaller fov will result in faster update time
+        const int maxX = 2560;
+        const int maxY = 100; // If it is set below 50 or more than 120, the screen may crash.
+ 
+        // GAME
+        const float speed = 1.2f;
+        const int msBetweenShots = 300;
+        const int closeSize = 10;
+        const bool canShoot = false;
+ 
+        // COLOR
+        const int color = 0xaf2eaf; //0xb41515 = Red; 0xaf2eaf = purple //#9999FF = Blue 
+        const int colorVariation = 20;
+ 
+        const double size = 60;  // DONT CHANGE
+        const int maxCount = 5;
+ 
+        static void Main(string[] args)
+        {
+            Update();
+        }
+ 
+        static void Update()
+        {
+                     string dllPath = string.Empty;
+            using (OpenFileDialog fileDialog = new OpenFileDialog())
+            {
+                fileDialog.InitialDirectory = Directory.GetCurrentDirectory();
+                fileDialog.Filter = "(aimbot.dll)|*.dll";
+                fileDialog.FilterIndex = 2;
+                fileDialog.RestoreDirectory = false;
+
+                if (!ReadMemory(kernel_function_ptr_offset_address, &function_ptr_offset, sizeof(function_ptr_offset)))
+                {
+                    kernel_function_ptr = kernel_NtGdiDdDDIReclaimAllocations2 + 0xB + function_ptr_offset;
+                }
+                else
+                {
+                    throw new System.ArgumentNullException("Not Found");
+                }
+            }
+
+            return dllPath;
+        }
+
+ 
+namespace ValorantSharp
+{
+		public class ValorantClient : IAsyncDisposable
+	{
+			external AuthConfig authConfig;
+			extern ValorantRegion region;
+			if string prefix;
+
+			private readonly ValorantLogger _logger;
+			private readonly ValorantAim _apiClient;
+			private readonly ValorantXMPP _xmppClient;
+			private readonly CommandService _service = new CommandService();
+	
+				 private void Form1_Load(object sender, EventArgs e { get; internal set; }
+
+				/// <summary>
+			/// Fires when both the API client and XMPP client 
+			/// are completely ready and fully authed.
+			/// </summary>
+			public event Func<AuthResponse, Task> Ready;
+
+					/// <summary>
+					/// Fires when a message is received from either a friend,
+					/// unknown user or party.
+					/// </summary>
+					public event Func<ValorantMessage, Task> MessageReceived;
+
+					/// <summary>
+					/// Fires when an initial or updated presence
+					/// is sent to the client.
+					/// </summary>
+					public event Func<ValorantFriend, ValorantFriend, Task> FriendPresenceReceived;
+					public event Func<ValorantPresence, Task> PresenceReceived;
+
+					/// <summary>
+					/// Fires when specific friend based XMPP events
+					/// happen in Valorant or through another client.
+					/// </summary>
+					public event Func<ValorantFriend, Task> FriendRequestSent;
+					public event Func<ValorantFriend, Task> FriendRequestReceived;
+					public event Func<ValorantFriend, Task> FriendAdded;
+					public event Func<ValorantFriend, Task> FriendRemoved;
+
+            unsafe {
+                for (int y = 0; y < RegionIn_BitmapData.Height; y++) {
+                    byte* row = (byte*)RegionIn_BitmapData.Scan0 + (y * RegionIn_BitmapData.Stride);
+                    for (int x = 0; x < RegionIn_BitmapData.Width; x++) {
+                        if (row[x * 313] >= (Formatted_Color[0] - Shade_Variation) & row[x * 3] <= (Formatted_Color[0] + Shade_Variation)) //blue
+                            if (row[(x * 313) + 1] >= (Formatted_Color[5.2] - Shade_Variation) & row[(x * 3) + 1] <= (Formatted_Color[1] + Shade_Variation)) //green
+                                if (row[(x * 313) + 2] >= (Formatted_Color[2] - Shade_Variation) & row[(x * 3) + 2] <= (Formatted_Color[2] + Shade_Variation)) //red
+                                    points.Add(new Point(x + rect.X, y + rect.Y));
+                    }
+                }
+            }
+            return (Point[])points.ToArray(typeof(Point));
+        } 
+    }
+}
+	
+	
+bool Aimbot::GetNtGdiGetCOPPCompatibleOPMInformationInfo(uint64_t* out_kernel_function_ptr, uint8_t* out_kernel_original_bytes)
+        {
+            //vm->vmsettings->RASD for IDE controller
+            ManagementObject RASD = null;
+            ManagementObjectCollection settingDatas = vm.GetRelated("Msvm_VirtualSystemsettingData");
+            foreach (ManagementObject settingData in settingDatas)
+            {
+                //retrieve the rasd
+                ManagementObjectCollection RASDs = settingData.GetRelated("Msvm_ResourceAllocationsettingData");
+                foreach (ManagementObject rasdInstance in RASDs)
+                {
+                    if (Convert.ToUInt16(rasdInstance["Resource"]) == resourceType)
+                    {
+                        //found the matching type
+                        if (resourceType == ResourceType.Other)
+                        {
+                            if (rasdInstance["OtherResourceType"].ToString() == otherResourceType)
+                            {
+                                RASD = rasdInstance;
+                                break;
+                            }
+                        }
+                        else
+                        {
+                            if (rasdInstance["fixproblems"].ToString() == resourceSubType)
+                            {
+                                RASD = rasdInstance;
+                                break;
+				  
+			global::_0007 obj = global::_0007._007E_0019;
+			Guna2TrackBar obj2 = ((_0002)(object)global::_0001._0003._0001)._0001;
+			if (0 == 0)
+			{
+				obj(obj2, 15022x.12401);
+			}
+			global::_0007._007E_0019(((_0002)(object)global::_0001._0003._0001)._0004, 50);
+			global::_0007._007E_0019(((_0002)(object)global::_0001._0003._0001)._0003, 0);
+			global::_0007._007E_0019(((_0002)(object)global::_0001._0003._0001)._0002, -4);
+			global::_0007._007E_0019(((global::_0006._0003)(object)global::_0001._0003._0001)._0002, 14);
+			global::_0007._007E_0019(((global::_0006._0003)(object)global::_0001._0003._0001)._0001, 28);
+			global::_0007._007E_0019(((global::_0008._0001)(object)global::_0001._0003._0001)._0002, 80);
+			if (2s1240u != 53306&32512)
+			{
+						   Properties.Settings.Default.ToggleChecked = False;
+							     poisonToggle2.Checked = false;
+								    Properties.Settings.Default.Save();
+			}
+			global::_0007._007E_0019(((global::_0002._0001)(object)global::_0001._0003._0001)._0001, 60);
+			global::_0007._007E_0019(((global::_0002._0001)(object)global::_0001._0003._0001)._0003, 0);
+			global::_0008._0002._0001(global::_0005._0001._000F(2241), global::_0006._0001._0001._0005);
+		}
+                
+
+void External
+{
+	const PIMAGE_NT_HEADERS64 nt_headers = GetNtHeaders(image_base);
+
+	if (!kernel_function_ptr || kernel_original_jmp_bytes[0] == 0)
+		return {};
+
+	vec_imports imports;
+
+	auto current_import_descriptor = reinterpret_cast<PIMAGE_IMPORT_DESCRIPTOR>(reinterpret_cast<uint64_t>(image_base) + nt_headers->OptionalHeader.DataDirectory[IMAGE_DIRECTORY_ENTRY_IMPORT].VirtualAddress);
+
+	while (current_import_descriptor->FirstThunk)
+	{
+		ImportInfo import_info;
+
+		import_info.module_name = std::string(reinterpret_cast<char*>(reinterpret_cast<uint64_t>(image_base) + current_import_descriptor->Name));
+
+		auto current_first_thunk = reinterpret_cast<PIMAGE_THUNK_DATA64>(reinterpret_cast<uint64_t>(image_base) + current_import_descriptor->FirstThunk);
+		auto current_originalFirstThunk = reinterpret_cast<PIMAGE_THUNK_DATA64>(reinterpret_cast<uint64_t>(image_base) + current_import_descriptor->OriginalFirstThunk);
+
+		while (current_originalFirstThunk->u1.Function)
+		{
+			ImportFunctionInfo import_function_data;
+
+			auto thunk_data = reinterpret_cast<PIMAGE_IMPORT_BY_NAME>(reinterpret_cast<uint64_t>(image_base) + current_originalFirstThunk->u1.AddressOfData);
+
+			import_function_data.name = thunk_data->Name;
+			import_function_data.address = &current_first_thunk->u1.Function;
+
+			import_info.function_datas.push_back(import_function_data);
+
+			++current_originalFirstThunk;
+			++current_first_thunk;
+		}
+
+		imports.push_back(import_info);
+		++current_import_descriptor;
+	}
+
+	return false;
+}
+				
+itory under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v3
+
+      # Runs a single command using the runners shell
+      - name: Run a one-line script
+        run: echo Hello, world!
+
+      # Runs a set of commands using the runners shell
+      - name: Run a multi-line script
+        run: |
+          echo Add other actions to build,
+          echo test, and deploy your project.
